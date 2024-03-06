@@ -9,6 +9,7 @@ router.get('/', (req, res, next)=>{
 });
 // __dirname holds the actual path of this directory from the OS
 // __dirname returns the path of the file in which it is used
+// ../ means go up one level
 
 // res.send() in expressJs by default sets the content type to text/html if not given 
 // and sets to binary or json if a boolean or number is given

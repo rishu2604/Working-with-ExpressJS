@@ -18,6 +18,13 @@ app.use(bodyParser.urlencoded({extended: false}));
 //     next(); // Allows the request to continue to the next middleware in line
 // });
 
+
+// Serving files statically means not  handled by express router or other middleware but instead directly forwarded to the file system
+// We have to pass the path to the folder which we want to serve statically, so basically a folder we want to grant read access to
+// We can register multiple static folders
+app.use(express.static(path.join(__dirname, 'public')));
+
+
 // app.use('/', (req, res, next)=>{
 //     // console.log('This always runs');
 //     next();
